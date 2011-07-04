@@ -12,6 +12,7 @@ The whole idea is to provide a simple way to use JavaScript compiler (less, haml
 Each compiler is independant and is easy to use.
 
 For exemple, if you want to compile a require-js file, all you need to do is : 
+
   - import the concoct jar from maven
   - call this simple lines of code : 
 
@@ -24,6 +25,7 @@ For less, haml, and coffescript it is very simple too. Look at the tests in the 
 
 
 Actually there is no maven-plugin, ant-plugin, gradle-plugin, grails-plugin, buildr-plugin, sbt-plugin,... using this library. Because there is a lot of build tools, this is up to you to create your own, but there will be no problem for you I think, because I tried to keep this library as simple as possible.
+
 Shortly I will do the grails, and the maven plugin because I need it, keep tuned.
 
 
@@ -87,6 +89,7 @@ How to contribute
 -----------------
 
 You want to create a markdown compiler in Java using the Javascript version,... or you anything else, just fork this project, code, make a test and ask for a pull-request.
+
 I will be happy to add your contribution. Open Source rocks !!!!!
 
 
