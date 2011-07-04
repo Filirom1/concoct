@@ -1,0 +1,5 @@
+@import "classpath:META-INF/import.css";
+
+body {
+    color: @color;
+}

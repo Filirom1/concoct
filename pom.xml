@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <groupId>org.filirom1</groupId>
+    <artifactId>concoct</artifactId>
+    <packaging>pom</packaging>
+    <version>0.1</version>
+    <description>
+        A set of utils to compile HAML, CoffeeScript, LESS or RequireJS files using JAVA (based on Rhino).
+
+        Each compiler is independent, so you need to choose the right sub-project you want.
+
+        Thanks to
+        - jakewins (Jacob Hansson) for its requirejs-maven project which inspired me a lot :
+        https://github.com/jakewins/requirejs-maven
+        - Asual lesscss java compiler implementation which is included in this porject :
+        http://www.asual.com/lesscss/
+    </description>
+    <modelVersion>4.0.0</modelVersion>
+    <modules>
+        <module>concoct-require-js</module>
+        <module>concoct-coffee-script</module>
+        <module>concoct-haml</module>
+        <module>concoct-less</module>
+        <module>concoct-require-js-external-test</module>
+    </modules>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <junit.version>4.8.2</junit.version>
+        <commons.io.version>2.0.1</commons.io.version>
+        <commons.logging.version>1.0.1</commons.logging.version>
+        <rhino.js.version>1.7R2</rhino.js.version>
+    </properties>
+    <developers>
+        <developer>
+            <name>Filirom1</name>
+            <email>filirom1@gmail.com</email>
+        </developer>
+        <developer>
+            <name>Asual</name>
+            <url>http://www.asual.com/lesscss</url>
+            <roles>
+                <role>lesscss-engine creator</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>2.3.2</version>
+                    <configuration>
+                        <source>1.6</source>
+                        <target>1.6</target>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons.io.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-logging</groupId>
+                <artifactId>commons-logging</artifactId>
+                <version>${commons.logging.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>rhino</groupId>
+                <artifactId>js</artifactId>
+                <version>${rhino.js.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+    <distributionManagement>
+        <repository>
+            <id>repo</id>
+            <url>https://Filirom1@github.com/Filirom1/filirom1-mvn-repo.git/raw/master/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshot-repo</id>
+            <url>https://Filirom1@github.com/Filirom1/filirom1-mvn-repo.git/raw/master/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+</project>
