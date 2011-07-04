@@ -1,7 +1,7 @@
 Concoct : CoffeeScript, Less-css, Haml and RequireJS compiler for the Java world
 ================================================================================
 
-Concoct your web-app with HAML, CoffeeScript, LESS and RequireJS in your Java world.
+Concoct your web-app with [HAML](http://haml-lang.com/), [CoffeeScript](http://jashkenas.github.com/coffee-script/), [Less-Css](http://lesscss.org/) and [RequireJS](http://requirejs.org/) in your Java world.
 
 
 Concept
