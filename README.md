@@ -28,7 +28,7 @@ Actually there is no maven-plugin, ant-plugin, gradle-plugin, grails-plugin, bui
 
 Shortly I will do the grails, and the maven plugin because I need it, keep tuned.
 
-
+*Update : If you are looking for a runtime solution or a maven very configurable build-time solution look at [wro4j](http://code.google.com/p/wro4j/)*
 
 How to import using Maven
 -------------------------
